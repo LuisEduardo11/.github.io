@@ -1,14 +1,13 @@
-    const boton = document.querySelector(".boton");
-    const contenedor = document.querySelector(".contenedor");
-    const modoBtn = document.querySelector("#modoBtn");
+const botonLinkedin = document.getElementById("linkedinBtn");
+const contenedor = document.querySelector(".contenedor");
+
+botonLinkedin.addEventListener("click", function(event) {
+   event.preventDefault();
     
     //
-    boton.addEventListener("click", function(event){
-         event.preventDefault();
-
         if (!document.querySelector(".mensaje")) {
 
-            boton.textContent = "¡Gracias por hacer clic!";
+            botonLinkedin.textContent = "¡Gracias por hacer clic!";
 
             const mensaje = document.createElement("p");
             mensaje.textContent = "Estoy más cerca de mi meta de ser desarrollador profesional";

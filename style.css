@@ -8,6 +8,18 @@ body {
     padding: 0;
     background-color: #f4f6f9;
 }
+.dark-mode {
+    background-color: #111;
+    color: white;
+}
+
+.dark-mode .contenedor {
+    background-color: #1e1e1e;
+}
+
+.dark-mode h2 {
+    color: #00d9ff;
+}
 
 .contenedor {
     max-width: 800px;
