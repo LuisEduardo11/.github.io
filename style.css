@@ -1,9 +1,9 @@
-html{
-scroll-behavisor: smooth;
+html {
+    scroll-behavior: smooth;
 }
     body {
         font-family: Arial, Helvetica, sans-serif;
-        margin; 0;
+        margin: 0;
         padding: 0;
         background-color: #f4f6f9;
     }
@@ -79,7 +79,7 @@ scroll-behavisor: smooth;
         transition: 0.3s;
     }
     .boton:hover{
-        background-color: #1e40af
+        background-color: #1e40af;
         transform: translateY(-2px);
     }
     .mensaje {
