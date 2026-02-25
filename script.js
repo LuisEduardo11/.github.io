@@ -1,5 +1,6 @@
 const botonLinkedin = document.getElementById("linkedinBtn");
 const contenedor = document.querySelector(".contenedor");
+const modoBtn = document.getElementById("modoBtn");
 
 botonLinkedin.addEventListener("click", function(event) {
     
