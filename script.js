@@ -1,3 +1,5 @@
+alert("JS cargado correctamente");
+
 document.addEventListener("DOMContentLoaded", function() {
 
     const botonLinkedin = document.getElementById("linkedinBtn");
