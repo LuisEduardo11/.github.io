@@ -2,7 +2,6 @@ const botonLinkedin = document.getElementById("linkedinBtn");
 const contenedor = document.querySelector(".contenedor");
 
 botonLinkedin.addEventListener("click", function(event) {
-   event.preventDefault();
     
     //
         if (!document.querySelector(".mensaje")) {
