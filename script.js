@@ -1,13 +1,29 @@
-const botonLinkedin = document.getElementById("linkedinBtn");
-const contenedor = document.querySelector(".contenedor");
-const modoBtn = document.getElementById("modoBtn");
+document.addEventListener("DOMContentLoaded", function() {
 
-botonLinkedin.addEventListener("click", function(event) {
-    
-    //
+    const botonLinkedin = document.getElementById("linkedinBtn");
+    const contenedor = document.querySelector(".contenedor");
+    const modoBtn = document.getElementById("modoBtn");
+
+    // MODO OSCURO AL CARGAR
+    if (localStorage.getItem("modo") === "oscuro") {
+        document.body.classList.add("dark-mode");
+    }
+
+    // BOTÓN CAMBIAR MODO
+    modoBtn.addEventListener("click", function() {
+        document.body.classList.toggle("dark-mode");
+
+        if (document.body.classList.contains("dark-mode")) {
+            localStorage.setItem("modo", "oscuro");
+        } else {
+            localStorage.setItem("modo", "claro");
+        }
+    });
+
+    // BOTÓN LINKEDIN
+    botonLinkedin.addEventListener("click", function() {
+
         if (!document.querySelector(".mensaje")) {
-
-            botonLinkedin.textContent = "¡Gracias por hacer clic!";
 
             const mensaje = document.createElement("p");
             mensaje.textContent = "Estoy más cerca de mi meta de ser desarrollador profesional";
@@ -16,19 +32,5 @@ botonLinkedin.addEventListener("click", function(event) {
             contenedor.appendChild(mensaje);
         }
     });
-    
-    //
-    if(localStorage.getItem("modo")=== "oscuro"){
-        document.body.classList.add("dark-mode");
-    }
 
-    modoBtn.addEventListener("click", function(){
-        document.body.classList.toggle("dark-mode");
-
-        //
-        if(document.body.classList.contains("dark-mode")){
-            localStorage.setItem("modo", "oscuro");
-        } else {
-            localStorage.setItem("modo", "claro");
-        }
-    })
+});
